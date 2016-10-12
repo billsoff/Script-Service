@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FAAAF48-9DFC-4C4C-8ED7-DEBCED638A87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CIPACE.Extension</RootNamespace>
+    <AssemblyName>SyntaxHighlighting</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeRenderControlService.cs" />
+    <Compile Include="SHResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Code\CSharpCodeRenderService.cs.txt" />
+    <Compile Include="CodeRenderControl.cs" />
+    <Compile Include="CSharpRenderControl.cs" />
+    <Compile Include="CSharpCodeRenderService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SH\scripts\shAutoloader.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushAppleScript.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushAS3.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushBash.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushColdFusion.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushCpp.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushCSharp.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushCss.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushDelphi.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushDiff.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushErlang.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushGroovy.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushJava.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushJavaFX.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushJScript.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushPerl.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushPhp.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushPlain.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushPowerShell.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushPython.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushRuby.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushSass.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushScala.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushSql.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushVb.js" />
+    <EmbeddedResource Include="SH\scripts\shBrushXml.js" />
+    <EmbeddedResource Include="SH\scripts\shCore.js" />
+    <EmbeddedResource Include="SH\scripts\shLegacy.js" />
+    <EmbeddedResource Include="SH\styles\shCore.css" />
+    <EmbeddedResource Include="SH\styles\shCoreDefault.css" />
+    <EmbeddedResource Include="SH\styles\shCoreDjango.css" />
+    <EmbeddedResource Include="SH\styles\shCoreEclipse.css" />
+    <EmbeddedResource Include="SH\styles\shCoreEmacs.css" />
+    <EmbeddedResource Include="SH\styles\shCoreFadeToGrey.css" />
+    <EmbeddedResource Include="SH\styles\shCoreMDUltra.css" />
+    <EmbeddedResource Include="SH\styles\shCoreMidnight.css" />
+    <EmbeddedResource Include="SH\styles\shCoreRDark.css" />
+    <EmbeddedResource Include="SH\styles\shThemeDefault.css" />
+    <EmbeddedResource Include="SH\styles\shThemeDjango.css" />
+    <EmbeddedResource Include="SH\styles\shThemeEclipse.css" />
+    <EmbeddedResource Include="SH\styles\shThemeEmacs.css" />
+    <EmbeddedResource Include="SH\styles\shThemeFadeToGrey.css" />
+    <EmbeddedResource Include="SH\styles\shThemeMDUltra.css" />
+    <EmbeddedResource Include="SH\styles\shThemeMidnight.css" />
+    <EmbeddedResource Include="SH\styles\shThemeRDark.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CSharpCodeRenderService.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Code\Sample.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeRenderControlService.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScriptService\ScriptService.csproj">
+      <Project>{c9427d87-e894-4f09-b293-bedb8b1f4003}</Project>
+      <Name>ScriptService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

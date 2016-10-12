@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ns="CIPACE.Extension.SH">
+  <includes>
+    <style ns="styles">
+      <items>
+        <item name="shCore" />
+        <item name="shCoreDefault" />
+        <item name="shCoreDjango" />
+        <item name="shCoreEclipse" />
+        <item name="shCoreEmacs" />
+        <item name="shCoreFadeToGrey" />
+        <item name="shCoreMDUltra" />
+        <item name="shCoreMidnight" />
+        <item name="shCoreRDark" />
+        <item name="shThemeDefault" />
+        <item name="shThemeDjango" />
+        <item name="shThemeEclipse" />
+        <item name="shThemeEmacs" />
+        <item name="shThemeFadeToGrey" />
+        <item name="shThemeMDUltra" />
+        <item name="shThemeMidnight" />
+        <item name="shThemeRDark" />
+      </items>
+    </style>
+    <javaScript ns="scripts">
+      <items>
+        <item name="shAutoloader" />
+        <item name="shBrushAppleScript" />
+        <item name="shBrushAS3" />
+        <item name="shBrushBash" />
+        <item name="shBrushColdFusion" />
+        <item name="shBrushCpp" />
+        <item name="shBrushCSharp" />
+        <item name="shBrushCss" />
+        <item name="shBrushDelphi" />
+        <item name="shBrushDiff" />
+        <item name="shBrushErlang" />
+        <item name="shBrushGroovy" />
+        <item name="shBrushJava" />
+        <item name="shBrushJavaFX" />
+        <item name="shBrushJScript" />
+        <item name="shBrushPerl" />
+        <item name="shBrushPhp" />
+        <item name="shBrushPlain" />
+        <item name="shBrushPowerShell" />
+        <item name="shBrushPython" />
+        <item name="shBrushRuby" />
+        <item name="shBrushSass" />
+        <item name="shBrushScala" />
+        <item name="shBrushSql" />
+        <item name="shBrushVb" />
+        <item name="shBrushXml" />
+        <item name="shCore" />
+        <item name="shLegacy" />
+      </items>
+    </javaScript>
+  </includes>
+  <brushes>
+    <brush name="shBrushCSharp" type="CSharp" alias="csharp" />
+    <brush name="shBrushJScript" type="JavaScript" alias="js" />
+    <brush name="shBrushSql" type="Sql" alias="sql" />
+    <brush name="shBrushAS3" type="ActionScript3" alias="as3" />
+    <brush name="shBrushBash" type="Bash_Shell" alias="bash" />
+    <brush name="shBrushColdFusion" type="ColdFusion" alias="cf" />
+    <brush name="shBrushCpp" type="Cpp" alias="c" />
+    <brush name="shBrushCss" type="Css" alias="css" />
+    <brush name="shBrushDelphi" type="Delphi" alias="delphi" />
+    <brush name="shBrushDiff" type="Diff" alias="diff" />
+    <brush name="shBrushErlang" type="Erlang" alias="erl" />
+    <brush name="shBrushGroovy" type="Groovy" alias="groovy" />
+    <brush name="shBrushJava" type="Java" alias="java" />
+    <brush name="shBrushJavaFX" type="JavaFX" alias="jfx" />
+    <brush name="shBrushPerl" type="Perl" alias="perl" />
+    <brush name="shBrushPhp" type="Php" alias="php" />
+    <brush name="shBrushPlain" type="PlainText" alias="text" />
+    <brush name="shBrushPowerShell" type="PowerShell" alias="ps" />
+    <brush name="shBrushPython" type="Python" alias="py" />
+    <brush name="shBrushRuby" type="Ruby" alias="ruby" />
+    <brush name="shBrushScala" type="Scala" alias="scala" />
+    <brush name="shBrushVb" type="VisualBasic" alias="vb" />
+    <brush name="shBrushXml" type="Xml" alias="xml" />
+  </brushes>
+  <themes>
+    <theme name="shThemeDefault" type="Default" />
+    <theme name="shThemeDjango" type="Django" />
+    <theme name="shThemeEclipse" type="Eclipse" />
+    <theme name="shThemeEmacs" type="Emacs" />
+    <theme name="shThemeFadeToGrey" type="FadeToGrey" />
+    <theme name="shThemeMidnight" type="Midnight" />
+    <theme name="shThemeRDark" type="RDark" />
+  </themes>
+</resource>

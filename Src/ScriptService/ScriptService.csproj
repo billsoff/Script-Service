@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9427D87-E894-4F09-B293-BEDB8B1F4003}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScriptService</RootNamespace>
+    <AssemblyName>ScriptService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientResourceType.cs" />
+    <Compile Include="CompleteDeclareEventArgs.cs" />
+    <Compile Include="CompleteInitializeEventArgs.cs" />
+    <Compile Include="CompleteInvokeEventArgs.cs" />
+    <Compile Include="CompleteValidateEventArgs.cs" />
+    <Compile Include="DataPropertyAttribute.cs" />
+    <Compile Include="DeclareAttribute.cs" />
+    <Compile Include="Discovery.cs" />
+    <Compile Include="FunctionDeclaration.cs" />
+    <Compile Include="HostEventArgs.cs" />
+    <Compile Include="HostRevocableEventArgs.cs" />
+    <Compile Include="ILiterallySerializable.cs" />
+    <Compile Include="ILiteralObject.cs" />
+    <Compile Include="LiterallySerializedAttribute.cs" />
+    <Compile Include="LiteralObjectBase.cs" />
+    <Compile Include="NonDataPropertyAttribute.cs" />
+    <Compile Include="PrepareDeclareEventArgs.cs" />
+    <Compile Include="PrepareInitializeEventArgs.cs" />
+    <Compile Include="PrepareInvokeEventArgs.cs" />
+    <Compile Include="PrepareSerializeDataEventArgs.cs" />
+    <Compile Include="PrepareValidateEventArgs.cs" />
+    <Compile Include="PrerequisiteAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptService.cs" />
+    <Compile Include="ServiceGuidAttribute.cs" />
+    <Compile Include="Support\ClientLibraryManager.cs" />
+    <Compile Include="Support\DataProperty.cs" />
+    <Compile Include="Support\DeclareItem.cs" />
+    <Compile Include="Support\DeclareJavaScriptItem.cs" />
+    <Compile Include="Support\DeclareStylesheetItem.cs" />
+    <Compile Include="Support\JavaScriptLibraryManager.cs" />
+    <Compile Include="Support\PrerequisiteJavaScriptLibraryManager.cs" />
+    <Compile Include="Support\PrerequisiteStylesheetLibraryManager.cs" />
+    <Compile Include="Support\SerializationUtility.cs" />
+    <Compile Include="Support\ServiceInfo.cs" />
+    <Compile Include="Support\ServiceManager.cs" />
+    <Compile Include="TargetEventArgs.cs" />
+    <Compile Include="TargetRevocableEventArgs.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

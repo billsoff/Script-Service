@@ -1,0 +1,94 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+
+[assembly: WebResource(CIPACE.Extension.CSharpCodeRenderService.STYLE_SHEET_SH_CORE, "text/css")]
+[assembly: WebResource(CIPACE.Extension.CSharpCodeRenderService.STYLE_SHEET_SH_THEME_DEFAULT, "text/css")]
+
+[assembly: WebResource(CIPACE.Extension.CSharpCodeRenderService.SCRIPT_SH_CORE, "text/javascript")]
+[assembly: WebResource(CIPACE.Extension.CSharpCodeRenderService.SCRIPT_SH_BRUSH_CSHARP, "text/javascript")]
+[assembly: WebResource(CIPACE.Extension.CSharpCodeRenderService.SCRIPT_NAME, "text/javascript")]
+
+namespace CIPACE.Extension
+{
+    [Serializable]
+    [ServiceGuid("B4CDDB31-1C56-46BB-80F2-225C8B1C475B", Name = "Highlight CSharp Code")]
+    [Declare(CSharpCodeRenderService.SCRIPT_NAME, Discovery.WebResource)]
+    public sealed class CSharpCodeRenderService : ScriptService
+    {
+        internal const string STYLE_SHEET_SH_CORE = "CIPACE.Extension.SH.styles.shCore.css";
+        internal const string STYLE_SHEET_SH_THEME_DEFAULT = "CIPACE.Extension.SH.styles.shThemeDefault.css";
+
+        internal const string SCRIPT_SH_CORE = "CIPACE.Extension.SH.scripts.shCore.js";
+        internal const string SCRIPT_SH_BRUSH_CSHARP = "CIPACE.Extension.SH.scripts.shBrushCSharp.js";
+        internal const string SCRIPT_NAME = "CIPACE.Extension.CSharpCodeRenderService.js";
+
+        [DataProperty("sh")]
+        [EmitLiterally]
+        public string SyntaxHighlighterObject
+        {
+            get { return "SyntaxHighlighter"; }
+        }
+
+        [DataProperty("code")]
+        public string CharpCodes
+        {
+            get;
+            set;
+        }
+
+        protected override void OnPrepareDeclare(PrepareDeclareEventArgs e)
+        {
+            base.OnPrepareDeclare(e);
+
+            // Declare prerequisite scripts and style sheet
+            AppendStyleSheet(STYLE_SHEET_SH_CORE, e.Page);
+            AppendStyleSheet(STYLE_SHEET_SH_THEME_DEFAULT, e.Page);
+
+            DeclareWebResource(e.Page, SCRIPT_SH_CORE, GetType().Assembly);
+            DeclareWebResource(e.Page, SCRIPT_SH_BRUSH_CSHARP, GetType().Assembly);
+        }
+
+        #region Help Members
+
+        private void AppendStyleSheet(string name, Page host)
+        {
+            HtmlLink style = CreteStyleSheet(name, host);
+            HtmlHead head = host.Header;
+
+            if (head != null)
+            {
+                head.Controls.Add(style);
+            }
+            else
+            {
+                host.Form.Controls.AddAt(0, style);
+            }
+        }
+
+        private HtmlLink CreteStyleSheet(string name, Page host)
+        {
+            HtmlLink style = new HtmlLink();
+
+            style.Href = GetWebResourceUrl(name, host);
+
+            style.Attributes["type"] = "text/css";
+            style.Attributes["rel"] = "stylesheet";
+
+            return style;
+        }
+
+        private string GetWebResourceUrl(string name, Page host)
+        {
+            string url = host.ClientScript.GetWebResourceUrl(GetType(), name);
+
+            return url;
+        }
+
+        #endregion
+    }
+}
